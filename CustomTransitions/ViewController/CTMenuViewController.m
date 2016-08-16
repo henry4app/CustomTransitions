@@ -9,7 +9,7 @@
 #import "CTMenuViewController.h"
 #import "CTMenuTableViewCell.h"
 #import "CTCrossDissolveFirstViewController.h"
-
+#import "CTSlideDownFirstViewController.h"
 @interface CTMenuViewController ()
 
 @property (nonatomic) NSArray *items;
@@ -56,14 +56,15 @@
 
 - (void)configureTableView {
     [self.tableView registerClass:[CTMenuTableViewCell class] forCellReuseIdentifier:@"Cell"];
-    self.items = @[@[@"Cross Dissolve", [CTCrossDissolveFirstViewController class]]];
+    self.items = @[@[@"Cross Dissolve", [CTCrossDissolveFirstViewController class]],
+                   @[@"Slide Down", [CTSlideDownFirstViewController class]]];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.preservesSuperviewLayoutMargins = NO;
     self.tableView.separatorInset = UIEdgeInsetsZero;
 }
 
 - (void)configureNavigationBar {
-    self.navigationController.navigationBar.barTintColor = [UIColor customGreenColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor customWhiteColor];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     self.navigationItem.title = @"Menu";
 }

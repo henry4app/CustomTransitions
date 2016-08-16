@@ -1,19 +1,19 @@
 //
-//  CTCrossDissolveSecondViewController.m
+//  CTSlideDownSecondViewController.m
 //  CustomTransitions
 //
-//  Created by 顾晨洁 on 16/8/15.
+//  Created by 顾晨洁 on 16/8/16.
 //  Copyright © 2016年 alientech. All rights reserved.
 //
 
-#import "CTCrossDissolveSecondViewController.h"
+#import "CTSlideDownSecondViewController.h"
 
-@interface CTCrossDissolveSecondViewController ()
+@interface CTSlideDownSecondViewController ()
 @property (nonatomic) UILabel *label;
 @property (nonatomic) UIButton *dismissBtn;
 @end
 
-@implementation CTCrossDissolveSecondViewController
+@implementation CTSlideDownSecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

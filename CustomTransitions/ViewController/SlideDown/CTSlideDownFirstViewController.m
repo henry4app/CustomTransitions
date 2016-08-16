@@ -1,21 +1,22 @@
 //
-//  CTCrossDissolveFirstViewController.m
+//  CTSlideDownFirstViewController.m
 //  CustomTransitions
 //
-//  Created by 顾晨洁 on 16/8/15.
+//  Created by 顾晨洁 on 16/8/16.
 //  Copyright © 2016年 alientech. All rights reserved.
 //
 
-#import "CTCrossDissolveFirstViewController.h"
-#import "CTCrossDissolveSecondViewController.h"
-#import "CTCrossDissolveTransitionAnimator.h"
+#import "CTSlideDownFirstViewController.h"
+#import "CTSlideDownSecondViewController.h"
+#import "CTSlideDownTransitionAnimator.h"
 
-@interface CTCrossDissolveFirstViewController ()<UIViewControllerTransitioningDelegate> //1，必须遵守协议
+@interface CTSlideDownFirstViewController ()<UIViewControllerTransitioningDelegate>
 @property (nonatomic) UILabel *label;
 @property (nonatomic) UIButton *presentBtn;
+
 @end
 
-@implementation CTCrossDissolveFirstViewController
+@implementation CTSlideDownFirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,20 +31,23 @@
 }
 
 #pragma mark UIViewControllerTransitioningDelegate
-// 2, 执行代理方法
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting
-                                                                      sourceController:(UIViewController *)source {
-    return [CTCrossDissolveTransitionAnimator new];
+                                                                    sourceController:(UIViewController *)source {
+    CTSlideDownTransitionAnimator *animator = [CTSlideDownTransitionAnimator new];
+    animator.isPresenting = YES;
+    return animator;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [CTCrossDissolveTransitionAnimator new];
+    CTSlideDownTransitionAnimator *animator = [CTSlideDownTransitionAnimator new];
+    animator.isPresenting = NO;
+    return animator;
 }
 
 #pragma mark Methods
 - (void)addPresentButton {
-     self.presentBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.presentBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.presentBtn setTitle:@"Present Second View Controller" forState:UIControlStateNormal];
     [self.view addSubview:self.presentBtn];
     [self.presentBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,9 +55,10 @@
         make.bottom.equalTo(-20);
     }];
     [self.presentBtn bk_addEventHandler:^(id sender) {
-        CTCrossDissolveSecondViewController *secondViewController = [CTCrossDissolveSecondViewController new];
+        CTSlideDownSecondViewController *secondViewController = [CTSlideDownSecondViewController new];
         secondViewController.transitioningDelegate = self; // 3, 设置代理方
-        secondViewController.modalPresentationStyle = UIModalPresentationCustom;
+        // 设置成UIModalPresentationFullScreen 使<ContextTransitioning>能提供到参与过渡动画的控制器的frame值
+        secondViewController.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:secondViewController animated:YES completion:nil];
     } forControlEvents:UIControlEventTouchUpInside];
 }
@@ -69,6 +74,4 @@
         make.center.equalTo(0);
     }];
 }
-
-
 @end

@@ -18,6 +18,13 @@
     return [self colorWithRed:57 green:202 blue:116];
 }
 
++ (UIColor *)customGrayColor {
+    return [self colorWithRed:127 green:140 blue:141];
+}
+
++ (UIColor *)customWhiteColor {
+    return [self colorWithRed:236 green:240 blue:241];
+}
 
 + (UIColor *)colorWithRed:(CGFloat)red
                     green:(CGFloat)green

@@ -12,5 +12,7 @@
 
 + (UIColor *)customPurpleColor;
 + (UIColor *)customGreenColor;
++ (UIColor *)customGrayColor;
++ (UIColor *)customWhiteColor;
 
 @end

@@ -19,6 +19,9 @@
 		ED12A3151D620F350009A6B0 /* UIColor+CTCustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A3141D620F350009A6B0 /* UIColor+CTCustomColors.m */; };
 		ED12A3191D6213690009A6B0 /* CTCrossDissolveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A3181D6213690009A6B0 /* CTCrossDissolveSecondViewController.m */; };
 		ED12A31C1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A31B1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.m */; };
+		ED12A3201D6354460009A6B0 /* CTSlideDownFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A31F1D6354460009A6B0 /* CTSlideDownFirstViewController.m */; };
+		ED12A3231D6354A20009A6B0 /* CTSlideDownSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A3221D6354A20009A6B0 /* CTSlideDownSecondViewController.m */; };
+		ED12A3261D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ED12A3251D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,12 @@
 		ED12A3181D6213690009A6B0 /* CTCrossDissolveSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCrossDissolveSecondViewController.m; sourceTree = "<group>"; };
 		ED12A31A1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCrossDissolveTransitionAnimator.h; sourceTree = "<group>"; };
 		ED12A31B1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCrossDissolveTransitionAnimator.m; sourceTree = "<group>"; };
+		ED12A31E1D6354460009A6B0 /* CTSlideDownFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSlideDownFirstViewController.h; sourceTree = "<group>"; };
+		ED12A31F1D6354460009A6B0 /* CTSlideDownFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSlideDownFirstViewController.m; sourceTree = "<group>"; };
+		ED12A3211D6354A20009A6B0 /* CTSlideDownSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSlideDownSecondViewController.h; sourceTree = "<group>"; };
+		ED12A3221D6354A20009A6B0 /* CTSlideDownSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSlideDownSecondViewController.m; sourceTree = "<group>"; };
+		ED12A3241D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSlideDownTransitionAnimator.h; sourceTree = "<group>"; };
+		ED12A3251D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSlideDownTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +153,7 @@
 			children = (
 				ED12A3091D6205910009A6B0 /* CTMenuViewController.h */,
 				ED12A30A1D6205910009A6B0 /* CTMenuViewController.m */,
+				ED12A31D1D6354240009A6B0 /* SlideDown */,
 				ED12A30F1D620A610009A6B0 /* CrossDissolve */,
 			);
 			path = ViewController;
@@ -160,6 +170,19 @@
 				ED12A31B1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.m */,
 			);
 			path = CrossDissolve;
+			sourceTree = "<group>";
+		};
+		ED12A31D1D6354240009A6B0 /* SlideDown */ = {
+			isa = PBXGroup;
+			children = (
+				ED12A31E1D6354460009A6B0 /* CTSlideDownFirstViewController.h */,
+				ED12A31F1D6354460009A6B0 /* CTSlideDownFirstViewController.m */,
+				ED12A3211D6354A20009A6B0 /* CTSlideDownSecondViewController.h */,
+				ED12A3221D6354A20009A6B0 /* CTSlideDownSecondViewController.m */,
+				ED12A3241D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.h */,
+				ED12A3251D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.m */,
+			);
+			path = SlideDown;
 			sourceTree = "<group>";
 		};
 		F7155DB23FD845F12E843FC2 /* Frameworks */ = {
@@ -293,9 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED12A2F31D6204460009A6B0 /* AppDelegate.m in Sources */,
+				ED12A3201D6354460009A6B0 /* CTSlideDownFirstViewController.m in Sources */,
 				ED12A3151D620F350009A6B0 /* UIColor+CTCustomColors.m in Sources */,
 				ED12A2F01D6204460009A6B0 /* main.m in Sources */,
 				ED12A30B1D6205910009A6B0 /* CTMenuViewController.m in Sources */,
+				ED12A3261D6354CB0009A6B0 /* CTSlideDownTransitionAnimator.m in Sources */,
+				ED12A3231D6354A20009A6B0 /* CTSlideDownSecondViewController.m in Sources */,
 				ED12A30E1D6206A60009A6B0 /* CTMenuTableViewCell.m in Sources */,
 				ED12A3191D6213690009A6B0 /* CTCrossDissolveSecondViewController.m in Sources */,
 				ED12A31C1D62139B0009A6B0 /* CTCrossDissolveTransitionAnimator.m in Sources */,
